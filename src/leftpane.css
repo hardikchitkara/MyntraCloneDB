@@ -1,0 +1,46 @@
+.sex{
+    font-weight: bold;
+    font-size: small;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: lightgrey solid 0.1px;
+}
+.brands{
+    
+    font-size: small;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: lightgrey solid 0.1px;
+}
+.price{
+    font-size: small;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: lightgrey solid 0.1px;
+}
+.color{
+    font-size: small;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: lightgrey solid 0.1px;
+}
+.discountrange{
+    font-size: small;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: lightgrey solid 0.1px;
+}
+span{
+    font-weight: bold;
+    margin-left: 20px;
+    font-size:small;
+}
+.leftcomponent{
+    border-right: lightgrey solid 0.1px;
+    display:block;
+    position: absolute;
+    width: 100%;
+    /* margin: 0 10px 0 0; */
+    z-index: 50;
+    background-color: white;
+}

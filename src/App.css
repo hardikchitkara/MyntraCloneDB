@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+
+.rightpane{
+  position: absolute;
+  right: 0px;
+  width: 80%;
+  top: 281px;
+}
+@media screen and (max-width: 768px) {
+  .rightpane{
+    position: absolute;
+    right: 0px;
+    top: 281px;
+    width: 14rem;
+  }
+} 
+.leftpane{
+  position: absolute;
+  left: 0px;
+  width: 20%;
+  min-width: 9rem;
+
+}
