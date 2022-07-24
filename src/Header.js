@@ -12,7 +12,7 @@ class Header extends React.Component{
     deleteFromDatabase=(param)=>
     {
         (async()=>{
-            let res=await  fetch(`/deleteItemCart/${param}`,{
+            let res=await  fetch(`https://myntra-server-mysql.herokuapp.com/deleteItemCart/${param}`,{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
@@ -50,7 +50,7 @@ class Header extends React.Component{
     }
     componentDidMount(){
         (async()=>{
-            let res=await fetch("/cartItems");
+            let res=await fetch("https://myntra-server-mysql.herokuapp.com/cartItems");
             let json=await res.json(); 
             let price=0;
             json.forEach(function(el){

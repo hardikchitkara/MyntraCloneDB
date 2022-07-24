@@ -38,7 +38,7 @@ class mainelementdeatils extends React.Component{
    
     sendCartData=async(param)=>{
         console.log(param);
-        const res=await fetch("/insert",{
+        const res=await fetch("https://myntra-server-mysql.herokuapp.com/insert",{
             method:"POST",
             headers:{
               "Accept":"application/json",

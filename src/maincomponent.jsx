@@ -9,7 +9,7 @@ const Maincomponent=(props)=>{
       // let loginUid=props.senduid;
       // console.log(loginUid);
     console.log("items component mounted with data");
-    let track=await fetch("/items",);
+    let track=await fetch("https://myntra-server-mysql.herokuapp.com/items",);
     console.log(track);
     let json=await track.json();
     console.log(json);

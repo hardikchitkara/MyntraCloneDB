@@ -15,7 +15,7 @@ const Login=()=>{
   const Loggedin=async()=>{
 
     let loginUid;
-    let ans=await fetch("/usersData")
+    let ans=await fetch("https://myntra-server-mysql.herokuapp.com/usersData")
     .then(function (res) {
       return res.json();
     })
@@ -37,7 +37,7 @@ const Login=()=>{
     if(x==false)
     {
       history.push({pathname:"/Myntra",state:{uid:loginUid}});
-      const res=await fetch("/loggedInData",{
+      const res=await fetch("https://myntra-server-mysql.herokuapp.com/loggedInData",{
         method:"POST",
         headers:{
           "Accept":"application/json",
@@ -59,7 +59,7 @@ const Login=()=>{
 
   const loginApprove=async()=>{
     
-    let ans=await fetch("/usersData")
+    let ans=await fetch("https://myntra-server-mysql.herokuapp.com/usersData")
     .then(function (res) {
       return res.json();
     })
@@ -80,7 +80,7 @@ const Login=()=>{
     //{pathname:"/",state:{uid:loginUid}}
     if(x==true){ 
       history.push({pathname:"/Myntra",state:{uid:loginUid}});
-      (async()=>await fetch("/loginuid",{
+      (async()=>await fetch("https://myntra-server-mysql.herokuapp.com/loginuid",{
         method:"POST",
         headers:{
           "Accept":"application/json",
