@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/MyntraCloneDB/static/css/main.5c43410e.chunk.css",
+    "main.js": "/MyntraCloneDB/static/js/main.7fc356ae.chunk.js",
+    "main.js.map": "/MyntraCloneDB/static/js/main.7fc356ae.chunk.js.map",
+    "runtime-main.js": "/MyntraCloneDB/static/js/runtime-main.c478ee3f.js",
+    "runtime-main.js.map": "/MyntraCloneDB/static/js/runtime-main.c478ee3f.js.map",
+    "static/js/2.4f731d34.chunk.js": "/MyntraCloneDB/static/js/2.4f731d34.chunk.js",
+    "static/js/2.4f731d34.chunk.js.map": "/MyntraCloneDB/static/js/2.4f731d34.chunk.js.map",
+    "index.html": "/MyntraCloneDB/index.html",
+    "static/css/main.5c43410e.chunk.css.map": "/MyntraCloneDB/static/css/main.5c43410e.chunk.css.map",
+    "static/js/2.4f731d34.chunk.js.LICENSE.txt": "/MyntraCloneDB/static/js/2.4f731d34.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c478ee3f.js",
+    "static/js/2.4f731d34.chunk.js",
+    "static/css/main.5c43410e.chunk.css",
+    "static/js/main.7fc356ae.chunk.js"
+  ]
+}
