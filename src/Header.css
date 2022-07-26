@@ -125,6 +125,15 @@
         position: absolute;
         
     }
+    /* .nameremove{
+        position: relative;
+        color:red;
+        cursor: pointer;
+         right: 0rem; 
+    }
+    .p-modal__dialog{
+        overflow-x: auto;
+    } */
   } 
 .bag{
     
@@ -178,6 +187,7 @@
 }
 #modal{
     visibility: hidden;
+    
 }
 .p-modal__close{
     right: 1rem;

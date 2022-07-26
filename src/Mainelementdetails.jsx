@@ -86,7 +86,7 @@ class mainelementdeatils extends React.Component{
             <div>
                 <div className="documentofimage">
                     
-                    <div   class="wholeimage">
+                    <div class="wholeimage">
                         <img className="full-image" src={this.state.imgurl}></img> 
                     </div>
 

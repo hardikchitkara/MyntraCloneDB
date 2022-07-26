@@ -21,7 +21,7 @@ class Header extends React.Component{
             });
             let json=await res.json();
             console.log(json);
-            window.location.reload (); 
+            window.location.reload ();
         })();
     }
     componentDidUpdate(){
@@ -43,14 +43,16 @@ class Header extends React.Component{
             let mysum=this.state.sum+this.props.sendalldata.price;
             this.setState({loading:stateloading,sum:mysum});
             this.setState({newdata:comingdata});
-            window.location.reload () ;
             alert("This item will be added to cart");
+            
         }
 
     }
     componentDidMount(){
+        console.log(this.props.senduid);
+
         (async()=>{
-            let res=await fetch("https://myntra-server-mysql.herokuapp.com/cartItems");
+            let res=await fetch(`https://myntra-server-mysql.herokuapp.com/cartItems/${this.props.senduid}`);
             let json=await res.json(); 
             let price=0;
             json.forEach(function(el){
@@ -59,6 +61,7 @@ class Header extends React.Component{
             this.setState({loading:json,sum:price});  
             
         })();
+
         
     }
    

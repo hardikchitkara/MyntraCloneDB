@@ -15,41 +15,47 @@ const Login=()=>{
   const Loggedin=async()=>{
 
     let loginUid;
+    
     let ans=await fetch("https://myntra-server-mysql.herokuapp.com/usersData")
     .then(function (res) {
       return res.json();
     })
     .then((json) => {
-      loginUid=json.uid;
       return json;
     });
 
     let x=false;
-    
+    let maxuid=0;
     ans.forEach((ele)=>{
       console.log(ele.email+" "+ele.password+" "+email+" "+password);
+      if(ele.uid>maxuid)
+      {
+        maxuid=ele.uid;
+      }
       if((email==ele.email && password==ele.password)||(email=="")||(password==""))
       {
         x=true; //already exist or not accepted
       }
     })
+    loginUid=maxuid+1;
+    
 
     if(x==false)
     {
-      history.push({pathname:"/Myntra",state:{uid:loginUid}});
-      const res=await fetch("https://myntra-server-mysql.herokuapp.com/loggedInData",{
+      (async()=>await fetch("https://myntra-server-mysql.herokuapp.com/loggedInData",{
         method:"POST",
         headers:{
           "Accept":"application/json",
           "Content-Type":"application/json"
         },
         body:JSON.stringify({
-            name:name,
-            email:email,
-            password:password,
-            uid:loginUid
+          name:name,
+          email:email,
+          password:password,
+          uid:loginUid
         })
-      })
+      }))();
+      history.push({pathname:"/Myntra",state:{uid:loginUid}});
     }
     else{
       setAlreadyexist(true);
@@ -64,6 +70,7 @@ const Login=()=>{
       return res.json();
     })
     .then((json) => {
+      
       return json;
     });
 
@@ -71,15 +78,16 @@ const Login=()=>{
     let loginUid;
     ans.forEach((ele)=>{
       // console.log(email+" "+password+" "+ele.email+" "+ele.password);
-      if(email==ele.email && password==ele.password)
+      if((email==ele.email && password==ele.password)&&(email!="")&&(password!=""))
       {
         x=true;
+        console.log(ele.uid);
         loginUid=ele.uid;
+        
       }
     })
     //{pathname:"/",state:{uid:loginUid}}
     if(x==true){ 
-      history.push({pathname:"/Myntra",state:{uid:loginUid}});
       (async()=>await fetch("https://myntra-server-mysql.herokuapp.com/loginuid",{
         method:"POST",
         headers:{
@@ -87,9 +95,11 @@ const Login=()=>{
           "Content-Type":"application/json"
         },
         body:JSON.stringify({
-            uid:loginUid
+          uid:loginUid
         })
       }))();
+      history.push({pathname:"/Myntra",state:{uid:loginUid}});
+      
     }
     else{setWrongpass(true);}
 
@@ -149,7 +159,7 @@ const Login=()=>{
             </fieldset>
            
             <button className="btn" onClick={ () => loginApprove()}>Login</button>
-            {wrongpass==true && setTimeout(() => {setWrongpass(false)}, 2000) && <div>Wrong pass, Try Again Please....</div>}
+            {wrongpass==true && setTimeout(() => {setWrongpass(false)}, 2000) && <div>Enter Correct Email Id and Password, Try Again Please....</div>}
             <button onClick={ () => setCurrentview("signUp")}>Create an Account</button>
             
           </div>

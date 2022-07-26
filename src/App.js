@@ -67,7 +67,7 @@ class App extends React.Component{
   //   })
   // }
   render(){
-    // console.log("cart data --->", this.state.cart);
+    // console.log("cart data --->", this.props.location.state.uid);
     
     return (
       <React.Fragment>
@@ -75,7 +75,7 @@ class App extends React.Component{
           <div className="App">
             <Header
               receivestringdata={this.receivestringdata}
-              
+              senduid={this.props.location.state.uid}
               // receiveitemsdata={this.receiveitemsdata}
             />
             <Middle

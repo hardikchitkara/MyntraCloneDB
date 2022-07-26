@@ -15,10 +15,12 @@ const Maincomponent=(props)=>{
     console.log(json);
     // console.log(props.uid);
     setallshirts(json);  
+    
   }
 
 useEffect(()=>{
    loadItems();
+   
 },[]);
 useEffect(()=>{
   props.receiveItemsLength(allshirts.length);
