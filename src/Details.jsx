@@ -46,6 +46,7 @@ function Details(){
             <div className="App">
                 <Header
                       sendalldata={data}
+                      senduid={location.state[0].uid}
                 />
             </div>
             <div>

@@ -156,7 +156,7 @@ class mainelementdeatils extends React.Component{
                                     alert("please select size first");
                                 }
                                 else{
-                                    // window.localStorage.setItem(`user${window.$count++}`, JSON.stringify([this.state.sex,this.state.price,this.state.brand,this.state.discount,this.state.color,this.state.size]));
+                                    
                                     this.sendCartData({uid:this.state.uid,itemid:this.state.itemid,size:this.state.size});
                                     
                                     setTimeout (function () { alert("Item is successfully inserted into the bag") }, 1000);
