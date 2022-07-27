@@ -144,18 +144,19 @@ class mainelementdeatils extends React.Component{
                         <div className="Buttonsaddandwish">
                             <div class="addtobag" onClick={()=>{
                                 
-                                this.props.receivesexdata(this.state.sex);
-                                this.props.receivepricedata(this.state.price);
-                                this.props.receivebranddata(this.state.brand);
-                                this.props.receivediscountrangedata(this.state.discount);
-                                this.props.receivecolordata(this.state.color);
-                                this.props.receivesizedata(this.state.size);
+                                
 
                                 if(this.state.size=="")
                                 {
                                     alert("please select size first");
                                 }
                                 else{
+                                    this.props.receivesexdata(this.state.sex);
+                                    this.props.receivepricedata(this.state.price);
+                                    this.props.receivebranddata(this.state.brand);
+                                    this.props.receivediscountrangedata(this.state.discount);
+                                    this.props.receivecolordata(this.state.color);
+                                    this.props.receivesizedata(this.state.size);
                                     
                                     this.sendCartData({uid:this.state.uid,itemid:this.state.itemid,size:this.state.size});
                                     

@@ -29,6 +29,8 @@
         position: absolute;
         left: 2vh;
     }
+    
+    
 } 
 
 @media screen and (max-width: 968px) {
@@ -125,20 +127,29 @@
         position: absolute;
         
     }
-    /* .nameremove{
+    #modal{
+        overflow-x: auto;
+    }
+    .nameremove{
         position: relative;
         color:red;
         cursor: pointer;
-         right: 0rem; 
+        /* right: 0rem;  */
+        /* top: 1rem; */
+        margin-top: 1.5rem;
     }
-    .p-modal__dialog{
-        overflow-x: auto;
+    /* .p-heading-icon--small{ */
+        /* overflow-x: scroll; */
+        /* width: 100vh; */
+    /* } */
+    /* .p-heading-icon__header{
+        width: 100%;
     } */
-  } 
+} 
 .bag{
     
     cursor: pointer;
-    z-index: 500;
+    /* z-index: 500; */
 
 }
 
@@ -187,7 +198,7 @@
 }
 #modal{
     visibility: hidden;
-    
+    /* z-index: 600; */
 }
 .p-modal__close{
     right: 1rem;
